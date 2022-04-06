@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  background-color: #252525;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 3.75rem 1.0rem;
+  transition: all 0.25s ease-in-out;
+  z-index: 98;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.15rem;
+}
+
+.container img {
+  margin: 2.0rem 0 5.0rem 0;
+}
+
+.hide {
+  margin-left: -100%;
+}
+
+.hamburger {
+  z-index: 99;
+  position: absolute;
+  top: 0.75rem;
+  left: 1.0rem;
+}
+
+.hamburger button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.item {
+  width: 85%;
+  text-align: center;
+  font-size: 1.5rem;
+  border-bottom: 0.085rem solid #454545;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.40rem 0 0.30rem 0;
+}
+
+.reset {
+  position: absolute;
+  bottom: 2.5rem;
+
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+
+  background-color: #252525;
+  border-color: #252525;
+
+  transition: all 0.15s ease-in-out;
+}
+
+.reset:active {
+  background-color: #ffd000;
+  border-color: #ffd000;
+  color: #252525;
+}

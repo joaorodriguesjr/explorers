@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  frontend:
+    image: node:lts-alpine
+    volumes:
+      - ../frontend:/home/node/frontend
+    user: node
+    working_dir: /home/node/frontend
+    networks:
+      - frontend
+    ports:
+      - "8085:3000"
+    command:
+      - "npm"
+      - "run"
+      - "dev"
+
+networks:
+  frontend:

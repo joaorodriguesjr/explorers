@@ -1,0 +1,11 @@
+.color {
+  display: inline-block;
+  margin: 0.0rem 0.15rem;
+  color: #ffd000;
+}
+
+.nocolor {
+  display: inline-block;
+  margin: 0.0rem 0.15rem;
+  color: #454545;
+}

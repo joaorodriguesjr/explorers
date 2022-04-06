@@ -1,0 +1,183 @@
+.action {
+  margin: 2.0rem 0.0rem;
+  text-align: center;
+}
+
+.action a {
+  display: inline-block;
+  padding: 0.50rem 1.00rem;
+  color: #252525;
+  font-size: 1.00rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 50%;
+  background-color: #ffd000;
+  color: #252525;
+  border: 1px solid #f1c40f;
+  border-radius: 0.25rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.action a:active {
+  background-color: #252525;
+  color: #f1c40f;
+  border: 1px solid #f1c40f;
+}
+
+.disabled a {
+  background-color: #252525;
+  color: #f1c40f;
+  border: 1px solid #f1c40f;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.report {
+  padding: 0.5rem 0.0rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #232323;
+  border: 1px solid #303030;
+  color: #959595;
+}
+
+.report th {
+  text-transform: uppercase;
+  font-size: 0.80rem;
+}
+
+.report td {
+  width: 50%;
+  text-align: center;
+  color: #656565;
+}
+
+.fleets {
+  flex-grow: 1;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 6.5rem;
+  grid-gap: 0.5rem;
+  padding: 0.0rem 0.5rem;
+}
+
+.fleet {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 6.5rem;
+  padding: 0.0rem 0.0rem;
+  background-color: #303030;
+  color: #959595;
+  border: 0.05rem solid #454545;
+  border-radius: 0.25rem;
+}
+
+.description {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  padding: 0.25rem 0.0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-right: 0.05rem solid #454545;
+  background-color: #353535;
+  transition: all 0.25s ease-in-out;
+}
+
+.wrench {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #303030;
+  border: 0.05rem solid #454545;
+  border-radius: 50%;
+  border-left: none;
+}
+
+.wrench svg {
+  width: 0.75rem;
+}
+
+.description:active {
+  background-color: #252525;
+}
+
+.stars {
+  font-size: 0.75rem;
+}
+
+.status {
+  width: 70%;
+}
+
+.status table {
+  width: 100%;
+  padding-top: 0.25rem;
+  /* padding-left: 1.0rem; */
+  font-size: 0.85rem;
+  color: #858585;
+}
+
+.status th {
+  text-transform: uppercase;
+  letter-spacing: 0.045rem;
+}
+
+.status td {
+  color: #707070;
+}
+
+.status th, .status td {
+  width: 50%;
+  text-align: center;
+}
+
+.status tbody td {
+  padding: 0.6rem 0.0rem;
+}
+
+.status button {
+  /* padding: 0.5rem 1.5rem; */
+  background-color: #303030;
+  text-transform: uppercase;
+  border: 1px solid #303030;
+  transition: all 0.25s ease-in-out;
+  text-transform: uppercase;
+}
+
+.status button:active {
+  background-color: #252525;
+  border: 1px solid #404040;
+}
+
+.id {
+  font-family: monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  color: #757575;
+}
+
+.actions {
+  margin: 0.0rem;
+}
+
+.actions button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}

@@ -1,0 +1,100 @@
+.balance {
+  width: 100%;
+  padding: 1.5rem;
+  text-align: right;
+}
+
+.report {
+  padding: 0.5rem 0.0rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #232323;
+  border: 1px solid #303030;
+  color: #959595;
+}
+
+.report th {
+  text-transform: uppercase;
+  font-size: 0.80rem;
+}
+
+.report td {
+  width: 50%;
+  text-align: center;
+  color: #656565;
+}
+
+.controls {
+  padding: 0.0rem 0.0rem 1.0rem 0.0rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spaceships {
+  flex-grow: 1;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 5.0rem;
+  grid-gap: 0.5rem;
+  padding: 0.0rem 0.5rem;
+}
+
+.spaceship {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.0rem;
+  padding: 1.0rem;
+  padding-bottom: 0.75rem;
+  background-color: #353535;
+  color: #959595;
+  border: 1px solid #454545;
+  border-radius: 0.25rem;
+}
+
+.selected {
+  background-color: #292929;
+  border-color: #454545;
+}
+
+.selection {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #505050;
+}
+
+.selection svg {
+  width: 1.0rem;
+  height: 1.0rem;
+}
+
+.id {
+  font-family: monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  color: #757575;
+}
+
+.actions {
+  margin: 0.0rem;
+}
+
+.actions button {
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.85rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border: 1px solid #353535;
+  transition: all 0.15s ease-in-out;
+}
+
+.actions button:active {
+  background-color: #303030;
+  border: 1px solid #404040;
+}

@@ -1,0 +1,38 @@
+.main__button {
+  display: inline-block;
+  padding: 0.50rem 1.0rem;
+
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.00rem;
+  font-weight: bold;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  letter-spacing: 0.05rem;
+
+  background-color: #ffd000;
+  color: #252525;
+
+  border: 1px solid #ffd000;
+  border-radius: 0.25rem;
+
+  transition: all 0.25s ease-in-out;
+}
+
+.main__button:active {
+  background-color: #252525;
+  color: #ffd000;
+
+  border: 1px solid #ffd000;
+}
+
+.main__button:disabled {
+  background-color: #252525;
+  color: #ffd000;
+
+  border: 1px solid #ffd000;
+
+  opacity: 0.25;
+  pointer-events: none;
+}

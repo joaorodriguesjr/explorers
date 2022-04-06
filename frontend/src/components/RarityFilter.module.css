@@ -1,0 +1,44 @@
+.box {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #555555;
+  display: none;
+}
+
+.rarities {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rarities button {
+  padding: 0.30rem 0.5rem 0.20rem 0.5rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.05rem;
+  border: none;
+  border-radius: 0;
+  transition: all 0.05s ease-in-out;
+}
+
+.rarities button:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.rarities button:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.active {
+  border-radius: 0.10rem;
+  background-color: #ffd000;
+  color: #252525;
+}

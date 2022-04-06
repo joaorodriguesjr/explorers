@@ -1,0 +1,186 @@
+.container {
+  padding: 1.0rem;
+}
+
+.report {
+  padding: 0.5rem 0.0rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: #232323;
+  border: 1px solid #303030;
+  color: #959595;
+}
+
+.report th {
+  text-transform: uppercase;
+  font-size: 0.80rem;
+}
+
+.report td {
+  width: 23%;
+  text-align: center;
+  color: #656565;
+}
+
+.report td:nth-child(1) {
+  width: 31%;
+}
+
+.report td:nth-child(3) {
+  font-size: 0.60rem;
+}
+
+.action {
+  margin: 2.0rem 0.0rem;
+  text-align: center;
+}
+
+.action button {
+  width: 50%;
+  background-color: #ffd000;
+  color: #252525;
+  border: 1px solid #f1c40f;
+  transition: all 0.25s ease-in-out;
+  padding: 0.50rem 1.00rem;
+  font-size: 1.00rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.action button:active {
+  background-color: #252525;
+  color: #f1c40f;
+  border: 1px solid #f1c40f;
+}
+
+.action button:disabled {
+  background-color: #252525;
+  color: #f1c40f;
+  border: 1px solid #f1c40f;
+  opacity: 0.25;
+}
+
+.action a {
+  display: inline-block;
+  padding: 0.50rem 1.00rem;
+  color: #252525;
+  font-size: 1.00rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.action a:active {
+  color: #f1c40f;
+}
+
+
+
+.selectable, .selected {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0.5rem 0.0rem;
+  overflow-y: hidden;
+  font-size: 0.85rem;
+}
+
+.selectable > div, .selected > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem 0.0rem;
+  overflow-y: hidden;
+}
+
+.selectable > div:first-child, .selected > div:first-child {
+  width: 45%;
+}
+
+.selectable > div:last-child, .selected > div:last-child {
+  width: 55%;
+}
+
+.selectable h3, .selected h3 {
+  margin: 0.0rem 0.0rem 0.5rem 0.0rem;
+  font-size: 0.80rem;
+  color: #606060;
+}
+
+.selectable__spaceships, .selected__spaceships {
+  flex-grow: 1;
+}
+
+.selectable__workers, .selected__workers {
+  flex-grow: 1;
+}
+
+.selectable__spaceships, .selected__spaceships {
+  overflow-y: scroll;
+}
+
+.selectable__workers, .selected__workers {
+  overflow-y: scroll;
+}
+
+.selectable svg, .selected svg {
+  width: 0.75rem;
+}
+
+.selectable button, .selected button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  padding: 0.075rem;
+  max-width: 2.0rem;
+}
+
+.selectable button:disabled, .selected button:disabled {
+  background-color: #202020;
+  opacity: 0.15;
+}
+
+
+
+.spaceship {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.20rem 0.0rem;
+}
+
+.spaceship > div:first-child {
+  flex: 0.75;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.spaceship > button:last-child {
+  flex-grow: 0.15;
+}
+
+.worker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.20rem 0.0rem;
+}
+
+.worker > div:first-child {
+  flex: 0.75;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.worker > button:last-child {
+  flex-grow: 0.15;
+}

@@ -1,0 +1,16 @@
+.horizontal {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.vertical {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.grow {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

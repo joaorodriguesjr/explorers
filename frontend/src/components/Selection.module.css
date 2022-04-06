@@ -1,0 +1,64 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+.container > button {
+  padding: 0.25rem 0.40rem;
+  background-color: transparent;
+  border: #353535 0.075rem solid;
+  transition: all 0.05s ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.container button svg {
+  width: 1.0rem;
+  height: 1.0rem;
+}
+
+.container .selected {
+  background-color: #ffd000;
+  border: #ffd000 0.075rem solid;
+  color: #353535;
+}
+
+.count {
+  margin: 0.0rem 0.75rem;
+}
+
+.actions {
+  background-color: #272727;
+  border: #353535 0.075rem solid;
+  border-radius: 0.25rem;
+}
+
+.actions button {
+  padding: 0.25rem 0.75rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  background-color: transparent;
+  border: none;
+  transition: all 0.10s ease-in-out;
+}
+
+.actions button:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+  padding-right: 0.5rem;
+}
+
+.actions button:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+  padding-left: 0.5rem;
+}
+
+.actions button:active {
+  background-color: #ffd000;
+  color: #252525;
+}

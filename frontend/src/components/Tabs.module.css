@@ -1,0 +1,64 @@
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  border-radius: 0.20rem;
+}
+
+.container ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.container li {
+  flex: 1;
+  margin-right: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #303030;
+  color: #959595;
+  transition: all 0.15s ease-in-out;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 0.045rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.container li:last-child {
+  margin-right: 0;
+}
+
+.contents {
+  flex: 1;
+  display: flex;
+  width: 200%;
+  overflow-y: hidden;
+  position: relative;
+  left: 0;
+  transition: all 0.15s ease-in-out;
+  background-color: #353535;
+  color: #959595;
+}
+
+.contents > div {
+  width: 100%;
+}
+
+.contents button {
+  background-color: #303030;
+  border: none;
+}
+
+.contents button:disabled {
+  background-color: #252525;
+  border: none;
+  opacity: 0.15;
+}
+
+.active {
+  background-color: #353535 !important;
+}
