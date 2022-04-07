@@ -128,9 +128,9 @@ const Fleet: NextPage = () => {
               </div>
             </div>
 
-            <div className={styles.selected__workers}>
+            <div>
               <Heading size={3}>Workers</Heading>
-              <div>
+              <div className={styles.selected__workers}>
                 {
                   selected.workers.map(({ id, rarity, power }) => {
 
