@@ -25,12 +25,12 @@ html, body, #__next {
 
 * {
   box-sizing: border-box;
-  -webkit-touch-callout: none;  /* Disable Android and iOS callouts*/
-  -webkit-user-select: none;  /* Chrome, Safari, and Opera */
-  -khtml-user-select: none;  /* KHTML browsers (e.g. Konqueror) */
-  -moz-user-select: none;  /* Mozilla Firefox */
-  -ms-user-select: none;  /* Internet Explorer */
-  user-select: none;  /* Non-prefixed version, currently supported by Chrome and Opera */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
@@ -73,26 +73,20 @@ svg {
   z-index: 9999;
 }
 
-
-
-/* width */
 ::-webkit-scrollbar {
   width: 2px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 0.75rem;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #656565;
   border-radius: 0.75rem;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #454545;
 }
