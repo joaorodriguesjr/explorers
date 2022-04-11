@@ -15,19 +15,15 @@ import { useSpaceships } from '@Hook/Spaceships'
 import Icon from '@Component/Icon'
 import RarityFilter from '@Component/RarityFilter'
 import EmptyListInfo from '@Component/EmptyListInfo'
-import Notifier from '@Component/Reveal/Notifier'
-import Reveal from '@Component/Reveal'
-import { useState } from 'react'
+import Reveal from '@Component/Spaceships/Reveal'
 
 const Spaceships: NextPage = () => {
   const { game, account, mintSpaceship, burnSpaceship, sellSpaceship } = useGame()
   const { rarity, emptyRarities, changeRarity, spaceships, count, capacity } = useSpaceships()
   const selection = useSelection()
 
-  const [ revealing, updateRevealing ] = useState(false)
-
   if (! game || ! account) {
-    return null
+    return <></>
   }
 
   function massBurn() {
@@ -74,7 +70,7 @@ const Spaceships: NextPage = () => {
 
   return (
     <PageContainer>
-      <Reveal type={'spaceships'}/>
+      <Reveal/>
 
       <Padding vertical={false}>
         <Balance value={account.balance} />

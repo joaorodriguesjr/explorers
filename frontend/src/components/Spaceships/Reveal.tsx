@@ -1,5 +1,6 @@
 import { FunctionComponent, useEffect, useState } from 'react'
 import styles from './Reveal.module.css'
+import { Spaceship } from '@Context/Game'
 import Modal from '@Component/Modal'
 import { Rarity } from '@Component/Reveal/Rarity'
 import { Rarity as RevealedRarity } from '@Component/Rarity'
@@ -9,18 +10,14 @@ import { useReveal } from '@Hook/Reveal'
 import Notifier from '@Component/Reveal/Notifier'
 import { classNames } from '@Helper/classNames'
 
-interface Props {
-  type: string
-}
 
-
-const Reveal: FunctionComponent<Props> = ({ type, children }) => {
+const Reveal: FunctionComponent = ({ children }) => {
   const reveal = useReveal()
 
   const [ containerClasses, updateContainerClasses ] = useState(styles.container)
   const [ done, updateDone ] = useState(false)
   const [ revealing, updateRevealing ] = useState(true)
-  const index = 0
+  const index = 0, type = 'spaceships'
 
   useEffect(() => {
     const timeout = setTimeout(() => updateRevealing(false), 2000)
@@ -31,8 +28,10 @@ const Reveal: FunctionComponent<Props> = ({ type, children }) => {
     return <></>
   }
 
+  const asset = reveal.assets(type)[index] as Spaceship
+
   const handleNextClick = () => {
-    reveal.registerReveal(type, reveal.assets(type)[index].id)
+    reveal.registerReveal(type, asset.id)
     updateRevealing(true)
   }
 
@@ -53,10 +52,10 @@ const Reveal: FunctionComponent<Props> = ({ type, children }) => {
         <Notifier type={type} onClick={handleNotifierClick}/>
       </div>
 
-      <Modal onOverlayClick={() => { } } visible={! done}>
+      <Modal onOverlayClick={() => {}} visible={! done}>
         <div className={styles.card}>
           <div className={styles.header}>
-            <h1  className={styles.title}>{type} Reveal</h1>
+            <h1  className={styles.title}>Spaceships Reveal</h1>
             <div className={styles.status}>{index + 1} / {reveal.count(type)}</div>
           </div>
 
@@ -65,10 +64,10 @@ const Reveal: FunctionComponent<Props> = ({ type, children }) => {
               reveal.hasAssets(type) &&
               <>
                 <div className={styles.id}>
-                  { revealing ? <Hex/> : <Shortener data={reveal.assets(type)[index].id}/> }
+                  { revealing ? <Hex/> : <Shortener data={asset.id}/> }
                 </div>
                 <div className={styles.stars}>
-                  { revealing ? <Rarity/> : <RevealedRarity count={reveal.assets(type)[index].rarity}/> }
+                  { revealing ? <Rarity/> : <RevealedRarity count={asset.rarity}/> }
                 </div>
               </>
             }
