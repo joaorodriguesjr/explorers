@@ -23,7 +23,7 @@ jobs:
       with:
         file: docker/frontend.dockerfile
         context: .
-        tags: ${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_USERNAME }}/explorers/frontend:latest
+        tags: ${{ secrets.REGISTRY_URL }}/${{ secrets.REGISTRY_USERNAME }}/explorers/frontend:${{ github.sha }}
         push: true
 
     - name: Before Secret
@@ -39,7 +39,7 @@ jobs:
 
     - name: Apply
       run: |
-        microk8s.kubectl apply -f kubernetes/deployment.yml
+        sed 's#CONTAINER_IMAGE#ghcr.io/joaorodriguesjr/explorers/frontend:${{ github.sha }}#' kubernetes/deployment.yml | microk8s.kubectl apply -f -
         microk8s.kubectl apply -f kubernetes/service.yml
         microk8s.kubectl apply -f kubernetes/ingress.yml
 

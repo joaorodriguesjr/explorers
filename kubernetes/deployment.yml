@@ -21,7 +21,7 @@ spec:
       - name: explorers-registry
       containers:
       - name: explorers-frontend
-        image: ghcr.io/joaorodriguesjr/explorers/frontend
+        image: CONTAINER_IMAGE
         imagePullPolicy: Always
         resources:
           limits:
