@@ -11,15 +11,15 @@ const MainMenu: FunctionComponent = () => {
   function executeReset() {
     setTimeout(() => {
       localStorage.removeItem('game')
-    }, 200)
-
-    setTimeout(() => {
-      router.reload()
-    }, 300)
+    }, 250)
 
     setTimeout(() => {
       updateHide(true)
     }, 500)
+
+    setTimeout(() => {
+      router.reload()
+    }, 750)
   }
 
   return (
