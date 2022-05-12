@@ -38,11 +38,11 @@
 }
 
 .show {
-  transition: right 0.5s ease-in-out 0.5s;
+  transition: right 0.5s ease-in-out 0.25s;
   right: 0.5rem;
 }
 
 .hide {
-  transition: right 0.5s ease-in-out 2.0s;
+  transition: right 0.5s ease-in-out 0.5s;
   right: -5.5rem;
 }
