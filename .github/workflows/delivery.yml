@@ -39,7 +39,7 @@ jobs:
 
     - name: Apply
       run: |
-        sed 's#CONTAINER_IMAGE#ghcr.io/joaorodriguesjr/explorers/frontend:${{ github.sha }}#' kubernetes/deployment.yml | microk8s.kubectl apply -f -
+        sed 's#CONTAINER_IMAGE#ghcr.io/${{ github.actor }}/explorers/frontend:${{ github.sha }}#' kubernetes/deployment.yml | microk8s.kubectl apply -f -
         microk8s.kubectl apply -f kubernetes/service.yml
         microk8s.kubectl apply -f kubernetes/ingress.yml
 
