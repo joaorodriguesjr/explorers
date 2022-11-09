@@ -19,10 +19,10 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v3
       with:
-        file: docker/frontend.dockerfile
         context: .
+        file: docker/frontend.dockerfile
         tags: ghcr.io/${{ github.actor }}/explorers/frontend:${{ github.sha }}
         push: true
 
