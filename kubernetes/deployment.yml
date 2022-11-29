@@ -17,8 +17,6 @@ spec:
       labels:
         app: explorers-frontend
     spec:
-      imagePullSecrets:
-      - name: explorers-registry
       containers:
       - name: explorers-frontend
         image: CONTAINER_IMAGE
